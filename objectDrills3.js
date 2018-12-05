@@ -129,3 +129,24 @@ function decodeWords (string) {
 }
 
 decodeWords("craft block argon meter bells brown croon droop");
+
+const test = createCharacter('evan', 'billy', 'white', 'heaven', 0, 0 )
+
+function createCharacter (name, nickname, race, origin, attack, defense ) {
+  return {
+    name,
+    nickname,
+    race,
+    origin,
+    attack,
+    defense,
+    describe: function() {return `${name} is a ${race} from ${origin}.`}
+  }
+}
+
+
+
+
+console.log(test.describe());
+
+
