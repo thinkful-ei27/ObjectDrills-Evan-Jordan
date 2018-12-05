@@ -92,10 +92,40 @@ const letterCipher = {
 }
 
 function decode (str, obj) {
-  if (str[0] === 'a') {
-  str += str.charAt(obj.a)
+  let letter = ""
+ switch(str[0]) {
+
+  case 'a':
+  letter = str.charAt(obj.a);
+  break;
+
+  case 'b':
+  letter = str.charAt(obj.b);
+  break;
+
+  case 'c':
+  letter = str.charAt(obj.c);
+  break;
+  
+  case 'd':
+  letter = str.charAt(obj.d);
+  break;
+
+  default:
+  letter = " "
+  break;
   }
-  return str;
+ return letter;
 }
 
-decode('allen', letterCipher)
+function decodeWords (string) {
+	const arr = string.split(" ");
+	const answer = [];
+	for (i=0; i<arr.length; i++){
+		answer.push(decode(arr[i], letterCipher));
+	}
+
+	console.log(answer.join(''));
+}
+
+decodeWords("craft block argon meter bells brown croon droop");
