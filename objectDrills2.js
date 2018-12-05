@@ -3,3 +3,31 @@ function makeStudentsReport(data) {
     return answer
   }
 
+  const students = [
+    {
+      name: 'Tim',
+      status: 'Current student',
+      course: 'Biology'
+    },
+    {
+      name: 'Sue',
+      status: 'Withdrawn',
+      course: 'Mathematics'
+    }
+  ];
+  
+
+function enrollInSummerSchool (students) {
+  const summerSchool = students.map(student => {
+    return {
+      name: student.name,
+      status: 'In Summer School',
+      course: student.course
+    }
+    
+  });
+  return summerSchool;
+}
+
+
+console.log(enrollInSummerSchool(students));
