@@ -1,16 +1,3 @@
-"use strict";
-
-const loaf = {
-	flour: 300,
-	water: 210,
-	hydration: function() {
-		return (this.water / this.flour) * 100;
-	}
-};
-
-console.log(loaf.flour, loaf.water);
-console.log(loaf.hydration());
-
 'use strict';
 
 const loaf = {
@@ -40,3 +27,19 @@ const fuBar = {
 for (const keys in fuBar) {
   console.log(`{${keys}: ${fuBar[keys]}}`);
 }
+
+
+const foodBar = {
+	meals: [
+		'breakfast', 
+		'second breakfast', 
+		'elevenses', 
+		'lunch', 
+		'afternoon tea', 
+		'dinner', 
+		'supper'
+	]
+}
+
+console.log(foodBar.meals[3]);
+
