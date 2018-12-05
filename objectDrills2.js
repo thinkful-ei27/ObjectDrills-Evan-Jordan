@@ -17,17 +17,29 @@ function makeStudentsReport(data) {
   ];
   
 
-function enrollInSummerSchool (students) {
-  const summerSchool = students.map(student => {
-    return {
-      name: student.name,
-      status: 'In Summer School',
-      course: student.course
-    }
+// function enrollInSummerSchool (students) {
+//   const summerSchool = students.map(student => {
+//     return {
+//       name: student.name,
+//       status: 'In Summer School',
+//       course: student.course
+//     }
     
-  });
-  return summerSchool;
+//   });
+//   return summerSchool;
+// }
+
+
+// console.log(enrollInSummerSchool(students));
+
+
+function findByID (items, idNum) {
+    const found = items.find(item => {
+        return item.id === idNum
+    } );
+    return found;
 }
 
+const dataID = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
 
-console.log(enrollInSummerSchool(students));
+console.log(findByID(dataID, 1))
