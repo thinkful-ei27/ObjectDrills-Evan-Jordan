@@ -50,19 +50,23 @@ console.log(foodBar.meals[3]);
 const people = [
   {
     name: 'Evan',
-    jobTitle: 'bartender'
+	jobTitle: 'bartender',
+	boss: 'Steve'
   },
   {
     name: 'Jordan',
-    jobTitle: 'video editor'
+	jobTitle: 'video editor',
+	boss: 'George'
   },
   {
     name: 'Spongebob',
-    jobTitle: 'fry cook'
+	jobTitle: 'fry cook',
+	boss: 'Gordon'
   },
   {
     name: 'Steven Speilberg',
-    jobTitle: 'director'
+	jobTitle: 'director',
+	boss: 'his wife'
   },
   {
     name: 'Gordan Ramsy',
@@ -70,6 +74,12 @@ const people = [
   }
 ]
 
-const jobAndName = people.map(person => console.log(person.name + ' ' + person.jobTitle)) 
+const jobAndName = people.map(person => {
+	if (person.hasOwnProperty('boss')) {
+		console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}.`);
+	} else {
+		console.log(`${person.jobTitle} ${person.name} doesn't report to anybody.`);
+	}
+});
 
 jobAndName;
