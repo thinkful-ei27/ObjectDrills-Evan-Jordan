@@ -141,25 +141,31 @@ function createCharacter (name, nickname, race, origin, attack, defense ) {
     origin,
     attack,
     defense,
-	describe: function() {return `${name} is a ${race} from ${origin}.`},
-	evaluateFight: function(character) {
-		let damage = character.attack - this.defense;
-		if (damage > 0) { 
-		return `Your opponent takes ${attack} damage and you recieve ${damage} damage.`
-	} else {return `Your opponent takes ${attack} damage and you recieve 0 damage.`}
-  }
+describe: function() {return `${name} is a ${race} from ${origin}.`},
+evaluateFight: function(character) {
+  let damage = character.attack - this.defense;
+  if (damage > 0) { 
+  return `Your opponent takes ${attack} damage and you recieve ${damage} damage.`
+} else {return `Your opponent takes ${attack} damage and you recieve 0 damage.`}
 }
- }
+}
+}
 
- const characters = [
-	createCharacter("Gandalf the White", "gandalf", "Wizard", "Middle Earth", 10, 6,), 
-	createCharacter("Bilbo Baggins", "bilbo", "Hobbit", "The Shire", 2, 1), 
-	createCharacter("Frodo Baggins", "frodo", "Hobbit", "The Shire", 3, 2),
-	createCharacter("Aragorn son of Arathorn", "aragorn", "Man", "Dunnedain", 6, 8),
-	createCharacter("Legolas", "legolas", "Elf", "Woodland Realm", 8, 5),
-	createCharacter("Arwen Undomiel", "Arwen", "Half-Elf", "Rivendell", 40, 80)
-	
+const characters = [
+createCharacter("Gandalf the White", "gandalf", "Wizard", "Middle Earth", 10, 6,), 
+createCharacter("Bilbo Baggins", "bilbo", "Hobbit", "The Shire", 2, 1), 
+createCharacter("Frodo Baggins", "frodo", "Hobbit", "The Shire", 3, 2),
+createCharacter("Aragorn son of Arathorn", "aragorn", "Man", "Dunnedain", 6, 8),
+createCharacter("Legolas", "legolas", "Elf", "Woodland Realm", 8, 5),
+createCharacter("Arwen Undomiel", "Arwen", "Half-Elf", "Rivendell", 40, 80)
+
 ];
-console.log(characters);
+
+const aragorn = characters.find(character => character.nickname === 'aragorn')
+console.log(aragorn.describe())
+
+const hobbits = characters.filter(character => character.race === 'Hobbit');
+
+console.log(hobbits);
 // console.log(test1.describe());
 // console.log(test2.evaluateFight(test1))
