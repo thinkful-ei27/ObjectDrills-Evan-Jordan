@@ -43,3 +43,33 @@ const foodBar = {
 
 console.log(foodBar.meals[3]);
 
+// Create 3-5 objects, each with a name and a jobTitle. Use people you know, or characters from fiction, or your own inventions.
+// Store these objects in an array.
+// Iterate over the array and use console.log to show each person's job title and name.
+
+const people = [
+  {
+    name: 'Evan',
+    jobTitle: 'bartender'
+  },
+  {
+    name: 'Jordan',
+    jobTitle: 'video editor'
+  },
+  {
+    name: 'Spongebob',
+    jobTitle: 'fry cook'
+  },
+  {
+    name: 'Steven Speilberg',
+    jobTitle: 'director'
+  },
+  {
+    name: 'Gordan Ramsy',
+    jobTitle: 'chef'
+  }
+]
+
+const jobAndName = people.map(person => console.log(person.name + ' ' + person.jobTitle)) 
+
+jobAndName;
