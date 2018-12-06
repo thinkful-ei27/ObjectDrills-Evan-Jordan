@@ -162,14 +162,14 @@ const characters = [
 
 
 
-// console.log(test1.describe());
-// console.log(test2.evaluateFight(test1))
+console.log(test1.describe());
+console.log(test2.evaluateFight(test1))
 
-// const aragorn = characters.find(character => character.nickname === 'aragorn')
-// console.log(aragorn.describe())
+const aragorn = characters.find(character => character.nickname === 'aragorn')
+console.log(aragorn.describe())
 
-// const hobbits = characters.filter(character => character.race === 'Hobbit');
-// console.log(hobbits);
+const hobbits = characters.filter(character => character.race === 'Hobbit');
+console.log(hobbits);
 
-// const fighters = characters.filter(character => character.attack > 5);
-// console.log(fighters);
+const fighters = characters.filter(character => character.attack > 5);
+console.log(fighters);
